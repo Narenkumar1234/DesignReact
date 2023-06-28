@@ -53,7 +53,7 @@ const percentageValues = Array.from({ length: 8 }, () => getRandomPercentage());
 function App() {
   return (
     <div class="flex ">
-      <div class="relative  w-3/12 h-scren py-9 px-10 h-screen text-white ">
+      <div class="relative  lg:w-3/12 w-full h-scren py-9 px-10 h-screen text-white ">
         {/* <!-- Content for the left div --> */}
         <div className="flex justify-between align-middle items-center text-white ">
           <div className="">
@@ -116,14 +116,14 @@ function App() {
           </div>
           <div>Sunny</div>
         </div>
-        <div className="fixed bottom-32 left-0 right-36">
-          <img src={SunImage} width="25.44%" alt="" />
+        <div className="fixed lg:w-1/5 w-full lg:bottom-28 bottom-0 left-0 right-36">
+          <img src={SunImage} sstyle={{"max-width": "26.33%"}} alt="" />
         </div>
-        <div className="absfix">
+        <div className="absfix hidden lg:block">
           <img src={WeatherImage} width="26.33%" alt="" />
         </div>
       </div>
-      <div class="bg-blue-100 px-14 py-9 round w-10/12 shadow-lg ">
+      <div class="bg-blue-100 hidden lg:block md:block px-14 py-9 round w-10/12 shadow-lg ">
         <div className="flex justify-between">
           <div>
             <h1 className="font-extrabold text-lg"> Welcome back Isabella!</h1>
@@ -305,9 +305,9 @@ function App() {
               </div>
               <div
                 class="semi-donut-model-2 mx-auto"
-                style={{"--percentage" : "40","--fill": "#039BE5 "}}
+                style={{ "--percentage": "40", "--fill": "#039BE5 " }}
               >
-               8 Km/h
+                8 Km/h
               </div>
             </div>
 

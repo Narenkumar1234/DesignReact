@@ -12,7 +12,6 @@ const WaveSVG = ({ percentages }) => {
         const containerHeight = svgRef.current.clientHeight;
 
         const waveHeight = 10;
-        const waveWidth = containerWidth / (percentages.length - 1);
         const svgComputedHeight = containerHeight - waveHeight;
 
         setSvgWidth(containerWidth);
@@ -34,7 +33,7 @@ const WaveSVG = ({ percentages }) => {
     };
   }, [percentages]);
 
-   const generateWavePath = () => {
+  const generateWavePath = () => {
     const waveCount = percentages.length;
     const waveSpacing = svgWidth / (waveCount - 1);
     let path = `M 0 ${svgHeight} `;
@@ -51,7 +50,7 @@ const WaveSVG = ({ percentages }) => {
     <div ref={svgRef} className="z-0">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        style={{ width: "100%", height: "90%", opacity: 0.7}}
+        style={{ width: "100%", height: "90%", opacity: 0.7 }}
       >
         rgba
         <path d={generateWavePath()} fill="#5C9CE5" />
